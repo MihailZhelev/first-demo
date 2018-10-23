@@ -1,0 +1,21 @@
+var button = document.querySelector("button");
+var list = document.querySelector("li").style.display = "none";
+var isPressed = false;
+
+button.addEventListener("click", function(){
+var input = document.getElementById("input").value;
+document.getElementById("input-text").innerHTML = "Hello " + input + " what would you like to do";
+
+});
+
+button.addEventListener("click", function time(){
+    if(isPressed){
+        document.querySelector("li").style.display = "none";
+        isPressed = false;
+    }
+    else if(!isPressed){
+        document.querySelector("li").style.display = "block";
+    isPressed = true; 
+} 
+  setTimeout(time, 500);
+});
